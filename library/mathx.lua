@@ -7,6 +7,82 @@
 local mathx = {}
 
 ---
+--- Return the larger of the numbers.
+---
+---__Reference:__
+---
+---* cppreference.com: [numeric/math/fmax](https://en.cppreference.com/w/c/numeric/math/fmax)
+---* [man3/fmax](https://man7.org/linux/man-pages/man3/fmax.3.html)
+---
+---@param ... number
+---
+---@return number
+function mathx.fmax(...) end
+
+---
+---Return the smaller of the numbers.
+---
+---__Reference:__
+---
+---* cppreference.com: [numeric/math/fmin](https://en.cppreference.com/w/c/numeric/math/fmin)
+---* [man3/fmin](https://man7.org/linux/man-pages/man3/fmin.3.html)
+---
+---@param ... number
+---
+---@return number
+function mathx.fmin(...) end
+
+---
+---Decompose given value `a` into a normalized fraction and an integral power of two.
+---
+---__Reference:__
+---
+---* cppreference.com: [numeric/math/frexp](https://en.cppreference.com/w/c/numeric/math/frexp)
+---* [man3/frexp](https://man7.org/linux/man-pages/man3/frexp.3.html)
+---
+---@param a number
+---
+---@return number
+---@return integer e
+function mathx.frexp(a) end
+
+---
+---Multiplies a floating point value `a` by the number `2` raised to the `b` power.
+---
+---__Reference:__
+---
+---* cppreference.com: [numeric/math/ldexp](https://en.cppreference.com/w/c/numeric/math/ldexp)
+---
+---@param a number
+---
+---@return number
+function mathx.ldexp(a, b) end
+
+---
+---__Reference:__
+---
+---* cppreference.com: [numeric/math/modf](https://en.cppreference.com/w/c/numeric/math/modf)
+---* [man3/modf](https://man7.org/linux/man-pages/man3/modf.3.html)
+---
+---@param a number
+---
+---@return number
+function mathx.modf(a, b) end
+
+---
+---Compute the absolute value of a value `a`.
+---
+---__Reference:__
+---
+---* cppreference.com: [numeric/math/fabs](https://en.cppreference.com/w/c/numeric/math/fabs)
+---* [man3/fabs](https://man7.org/linux/man-pages/man3/fabs.3.html)
+---
+---@param a number
+---
+---@return number
+function mathx.fabs(a) end
+
+---
 ---Compute the principal value of the arc cosine of `a`.
 ---
 ---__Reference:__
@@ -66,10 +142,10 @@ function mathx.asinh(a) end
 ---* cppreference.com: [numeric/math/atan](https://en.cppreference.com/w/c/numeric/math/atan)
 ---* [man3/atan](https://man7.org/linux/man-pages/man3/atan.3.html)
 ---
----@see xmath.atan2
+---@see mathx.atan2
 ---
 ---@param a number
----@param b? number # If the value is given, then the function `xmath.atan2` is calculated.
+---@param b? number # If the value is given, then the function `mathx.atan2` is calculated.
 ---
 ---@return number
 function mathx.atan(a, b) end
@@ -246,19 +322,6 @@ function mathx.exp2(a) end
 function mathx.expm1(a) end
 
 ---
----Compute the absolute value of a value `a`.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/fabs](https://en.cppreference.com/w/c/numeric/math/fabs)
----* [man3/fabs](https://man7.org/linux/man-pages/man3/fabs.3.html)
----
----@param a number
----
----@return number
-function mathx.fabs(a) end
-
----
 ---Return the positive difference between `a` and `b`, that is, if `a > b`, returns `a - b`, otherwise (if `a <= b`), returns `+0`.
 ---
 ---__Reference:__
@@ -299,32 +362,6 @@ function mathx.floor(a) end
 function mathx.fma(a, b, c) end
 
 ---
---- Return the larger of the numbers.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/fmax](https://en.cppreference.com/w/c/numeric/math/fmax)
----* [man3/fmax](https://man7.org/linux/man-pages/man3/fmax.3.html)
----
----@param ... number
----
----@return number
-function mathx.fmax(...) end
-
----
----Return the smaller of the numbers.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/fmin](https://en.cppreference.com/w/c/numeric/math/fmin)
----* [man3/fmin](https://man7.org/linux/man-pages/man3/fmin.3.html)
----
----@param ... number
----
----@return number
-function mathx.fmin(...) end
-
----
 ---Compute the floating-point remainder of the division operation `a / b`.
 ---
 ---__Reference:__
@@ -337,20 +374,6 @@ function mathx.fmin(...) end
 ---
 ---@return number
 function mathx.fmod(a, b) end
-
----
----Decompose given value `a` into a normalized fraction and an integral power of two.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/frexp](https://en.cppreference.com/w/c/numeric/math/frexp)
----* [man3/frexp](https://man7.org/linux/man-pages/man3/frexp.3.html)
----
----@param a number
----
----@return number
----@return integer e
-function mathx.frexp(a) end
 
 ---
 ---Return the natural logarithm of the absolute value of the Gamma function.
@@ -430,18 +453,6 @@ function mathx.isnan(a) end
 function mathx.isnormal(a) end
 
 ---
----Multiplies a floating point value `a` by the number `2` raised to the `b` power.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/ldexp](https://en.cppreference.com/w/c/numeric/math/ldexp)
----
----@param a number
----
----@return number
-function mathx.ldexp(a, b) end
-
----
 ---Compute the natural logarithm of the absolute value of the gamma function of `a`.
 ---
 ---__Reference:__
@@ -519,17 +530,6 @@ function mathx.log2(a) end
 function mathx.logb(a) end
 
 ---
----__Reference:__
----
----* cppreference.com: [numeric/math/modf](https://en.cppreference.com/w/c/numeric/math/modf)
----* [man3/modf](https://man7.org/linux/man-pages/man3/modf.3.html)
----
----@param a number
----
----@return number
-function mathx.modf(a, b) end
-
----
 ---Rounds the floating-point argument `a` to an integer value in floating-point format, using the current rounding mode.
 ---
 ---__Reference:__
@@ -575,8 +575,7 @@ function mathx.pow(a, b) end
 ---
 ---__Reference:__
 ---
----
----@see xmath.deg
+---@see mathx.deg
 ---
 ---@param a number
 ---
@@ -596,25 +595,6 @@ function mathx.rad(a) end
 ---
 ---@return number
 function mathx.remainder(a, b) end
-
----
----Compute the floating-point remainder of the division operation `a/b` as the remainder() function does.
----
----Additionally, the sign and at least the three of the last bits of `a/b` will be returned in `quo`, sufficient to determine the octant of the result within a period.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/remquo](https://en.cppreference.com/w/c/numeric/math/remquo)
----* [man3/remquo](https://man7.org/linux/man-pages/man3/remquo.3.html)
----
----@see xmath.remainder
----
----@param a number
----@param b number
----
----@return number
----@return integer quo
-function mathx.remquo(a, b) end
 
 ---
 ---Computes the nearest integer value to `a`, rounding halfway cases away from zero.
@@ -732,86 +712,5 @@ function mathx.tgamma(a) end
 ---
 ---@return number
 function mathx.trunc(a) end
-
----
----Return the Bessel functions of `a` of the *first* kind of orders `0`.
----
----__Reference:__
----
----* [man3/j0.3](https://man7.org/linux/man-pages/man3/j0.3.html)
----* [Wikipedia: Bessel function](https://en.wikipedia.org/wiki/Bessel_function)
----
----@param a number
----
----@return number
-function mathx.j0(a) end
-
----
----Return the Bessel functions of `a` of the *first* kind of orders `1`.
----
----__Reference:__
----
----* [man3/j0.3](https://man7.org/linux/man-pages/man3/j0.3.html)
----* [Wikipedia: Bessel function](https://en.wikipedia.org/wiki/Bessel_function)
----
----@param a number
----
----@return number
-function mathx.j1(a) end
-
----
----Return the Bessel function of `a` of the *first* kind of order `n`.
----
----__Reference:__
----
----* [man3/j0.3](https://man7.org/linux/man-pages/man3/j0.3.html)
----* [Wikipedia: Bessel function](https://en.wikipedia.org/wiki/Bessel_function)
----
----@param n integer
----@param a number
----
----@return number
-function mathx.jn(n, a) end
-
----
----Return the Bessel functions of `a` of the *second* kind of orders `0`.
----
----__Reference:__
----
----* [man3/y0.3](https://man7.org/linux/man-pages/man3/y0.3.html)
----* [Wikipedia: Bessel function](https://en.wikipedia.org/wiki/Bessel_function)
----
----@param a number
----
----@return number
-function mathx.y0(a) end
-
----
----Return the Bessel functions of `a` of the *second* kind of orders `1`.
----
----__Reference:__
----
----* cppreference.com: [numeric/math/atan2](https://en.cppreference.com/w/c/numeric/math/)
----* [man3/y0.3](https://man7.org/linux/man-pages/man3/y0.3.html)
----* [Wikipedia: Bessel function](https://en.wikipedia.org/wiki/Bessel_function)
----
----@param a number
----
----@return number
-function mathx.y1(a) end
-
----
----Return the Bessel function of `a` of the *second* kind of order `n`.
----
----__Reference:__
----
----* [man3/y0.3](https://man7.org/linux/man-pages/man3/y0.3.html)
----* [Wikipedia: Bessel function](https://en.wikipedia.org/wiki/Bessel_function)
----
----@param n number
----@param a integer
----
----@return number
-function mathx.yn(n, a) end
 
 return mathx
