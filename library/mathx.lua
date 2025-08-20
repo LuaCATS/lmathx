@@ -274,7 +274,6 @@ function mathx.cosh(a) end
 ---
 ---__Reference:__
 ---
----
 ---@param a number # radians
 ---
 ---@return number # degrees
