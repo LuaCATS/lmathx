@@ -33,7 +33,7 @@
 local mathx = {}
 
 ---
---- Return the larger of the numbers.
+---Return the larger of the numbers.
 ---
 ---__Reference:__
 ---
@@ -59,7 +59,8 @@ function mathx.fmax(...) end
 function mathx.fmin(...) end
 
 ---
----Decompose given value `a` into a normalized fraction and an integral power of two.
+---Decompose given value `a` into a normalized fraction and an integral power of
+---two.
 ---
 ---__Reference:__
 ---
@@ -73,7 +74,8 @@ function mathx.fmin(...) end
 function mathx.frexp(a) end
 
 ---
----Multiplies a floating point value `a` by the number `2` raised to the `b` power.
+---Multiplies a floating point value `a` by the number `2` raised to the `b`
+---power.
 ---
 ---__Reference:__
 ---
@@ -177,7 +179,8 @@ function mathx.asinh(a) end
 function mathx.atan(a, b) end
 
 ---
----Compute the arc tangent of `a / b` using the signs of arguments to determine the correct quadrant.
+---Compute the arc tangent of `a / b` using the signs of arguments to determine
+---the correct quadrant.
 ---
 ---__Reference:__
 ---
@@ -293,12 +296,13 @@ function mathx.deg(a) end
 function mathx.erf(a) end
 
 ---
----Compute the complementary error function of `a`, that is `1.0 - erf(a)`, but without loss of precision for large `a`.
----* [man3/erfc](https://man7.org/linux/man-pages/man3/erfc.3.html)
+---Compute the complementary error function of `a`, that is `1.0 - erf(a)`, but
+---without loss of precision for large `a`.
 ---
 ---__Reference:__
 ---
 ---* cppreference.com: [numeric/math/erfc](https://en.cppreference.com/w/c/numeric/math/erfc)
+---* [man3/erfc](https://man7.org/linux/man-pages/man3/erfc.3.html)
 ---
 ---@param a number
 ---
@@ -332,9 +336,11 @@ function mathx.exp(a) end
 function mathx.exp2(a) end
 
 ---
----Compute the `e` (Euler's number, `2.7182818`) raised to the given power `a`, minus `1.0`.
+---Compute the `e` (Euler's number, `2.7182818`) raised to the given power `a`,
+---minus `1.0`.
 ---
----This function is more accurate than the expression `exp(arg)-1.0` if `a` is close to zero.
+---This function is more accurate than the expression `exp(arg)-1.0` if `a` is
+---close to zero.
 ---
 ---__Reference:__
 ---
@@ -347,7 +353,8 @@ function mathx.exp2(a) end
 function mathx.expm1(a) end
 
 ---
----Return the positive difference between `a` and `b`, that is, if `a > b`, returns `a - b`, otherwise (if `a <= b`), returns `+0`.
+---Return the positive difference between `a` and `b`, that is, if `a > b`,
+---returns `a - b`, otherwise (if `a <= b`), returns `+0`.
 ---
 ---__Reference:__
 ---
@@ -373,7 +380,9 @@ function mathx.fdim(a, b) end
 function mathx.floor(a) end
 
 ---
----Compute `(a*b) + c` as if to infinite precision and rounded only once to fit the result type.
+---Compute `(a*b) + c` as if to infinite precision and rounded only once to fit
+---the result type.
+---
 ---__Reference:__
 ---
 ---* cppreference.com: [numeric/math/fma](https://en.cppreference.com/w/c/numeric/math/fma)
@@ -413,7 +422,8 @@ function mathx.fmod(a, b) end
 function mathx.gamma(a) end
 
 ---
----Compute the square root of the sum of the squares of `a` and `b`, without undue overflow or underflow at intermediate stages of the computation.
+---Compute the square root of the sum of the squares of `a` and `b`, without
+---undue overflow or underflow at intermediate stages of the computation.
 ---
 ---__Reference:__
 ---
@@ -426,7 +436,8 @@ function mathx.gamma(a) end
 function mathx.hypot(a, b) end
 
 ---
----Determine if the given  number `a` has finite value i.e. it is normal, subnormal or zero, but not infinite or NaN.
+---Determine if the given  number `a` has finite value i.e. it is normal,
+---subnormal or zero, but not infinite or NaN.
 ---
 ---__Reference:__
 ---
@@ -465,7 +476,8 @@ function mathx.isinf(a) end
 function mathx.isnan(a) end
 
 ---
----Determine if the given number `a` is normal, i.e. is neither zero, subnormal, infinite, nor NaN.
+---Determine if the given number `a` is normal, i.e. is neither zero, subnormal,
+---infinite, nor NaN.
 ---
 ---__Reference:__
 ---
@@ -478,7 +490,8 @@ function mathx.isnan(a) end
 function mathx.isnormal(a) end
 
 ---
----Compute the natural logarithm of the absolute value of the gamma function of `a`.
+---Compute the natural logarithm of the absolute value of the gamma function of
+---`a`.
 ---
 ---__Reference:__
 ---
@@ -518,7 +531,8 @@ function mathx.log(a, b) end
 function mathx.log10(a) end
 
 ---
----Compute the natural (base `e`) logarithm of `1+arg`. This function is more precise than the expression `log(1+a)` if `a` is close to zero.
+---Compute the natural (base `e`) logarithm of `1+arg`. This function is more
+---precise than the expression `log(1+a)` if `a` is close to zero.
 ---
 ---__Reference:__
 ---
@@ -555,7 +569,8 @@ function mathx.log2(a) end
 function mathx.logb(a) end
 
 ---
----Rounds the floating-point argument `a` to an integer value in floating-point format, using the current rounding mode.
+---Rounds the floating-point argument `a` to an integer value in floating-point
+---format, using the current rounding mode.
 ---
 ---__Reference:__
 ---
@@ -568,7 +583,9 @@ function mathx.logb(a) end
 function mathx.nearbyint(a) end
 
 ---
----First, convert both arguments to the type of the function, then return the next representable value of from in the direction of to. If from equals to to, to is returned.
+---First, convert both arguments to the type of the function, then return the
+---next representable value of from in the direction of to. If from equals to
+---to, to is returned.
 ---
 ---__Reference:__
 ---
@@ -622,7 +639,8 @@ function mathx.rad(a) end
 function mathx.remainder(a, b) end
 
 ---
----Computes the nearest integer value to `a`, rounding halfway cases away from zero.
+---Computes the nearest integer value to `a`, rounding halfway cases away from
+---zero.
 ---
 ---__Reference:__
 ---
